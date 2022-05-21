@@ -1,0 +1,6 @@
+<h1>SignalR with Hub <span class="badge badge-secondary">1</span></h1>
+<ng-container *ngIf="receivedMessages">
+    <ul class="list-group">
+        <li *ngFor="let message of receivedMessages" class="list-group-item">{{message}}</li>
+    </ul>
+</ng-container>
