@@ -20,6 +20,7 @@ export class SignalRClientComponent implements OnInit {
     const connection = new signalR.HubConnectionBuilder()  
       .configureLogging(signalR.LogLevel.Information)  
       .withUrl('https://localhost:7118/' + 'Hub')  
+      .withAutomaticReconnect()
       .build();  
   
     //Starting connection with Server
