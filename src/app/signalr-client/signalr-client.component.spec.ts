@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SignalRClientComponent } from './signal-rclient.component';
+import { SignalRClientComponent } from './signalr-client.component';
 
 describe('SignalRClientComponent', () => {
   let component: SignalRClientComponent;

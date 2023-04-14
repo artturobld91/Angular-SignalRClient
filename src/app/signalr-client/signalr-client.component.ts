@@ -2,9 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import * as signalR from '@microsoft/signalr';  
 
 @Component({
-  selector: 'app-signal-rclient',
-  templateUrl: './signal-rclient.component.html',
-  styleUrls: ['./signal-rclient.component.css']
+  selector: 'app-signalr-client',
+  templateUrl: './signalr-client.component.html',
+  styleUrls: ['./signalr-client.component.css']
 })
 
 //TODO: Log messages received from server into UI 

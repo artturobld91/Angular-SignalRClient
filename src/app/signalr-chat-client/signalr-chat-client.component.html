@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-lg-12">
+            <div class="card chat-app">
+                <div id="plist" class="people-list">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </div>
+                    <ul class="list-unstyled chat-list mt-2 mb-0">
+                        <li class="clearfix">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="avatar">
+                            <div class="about">
+                                <div class="name">Vincent Porter</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> left 7 mins ago </div>                                            
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chat">
+                    <div class="chat-header clearfix">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="avatar">
+                                </a>
+                                <div class="chat-about">
+                                    <h6 class="m-b-0">Vincent Porter</h6>
+                                    <small>Last seen: 7 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-history">
+                        <ul class="m-b-0">
+                            <div *ngFor="let message of receivedMessagesRepo">
+                                <li class="clearfix">
+                                    <div class="message-data text-right">
+                                        <span class="message-data-time">{{ message.sentAt }}</span>
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
+                                    </div>
+                                        <div class="message other-message float-right"> {{ message.messageContent }} </div>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="chat-message clearfix">
+                        <div class="input-group mb-0">
+                            <input #message type="text" class="form-control" placeholder="Enter text here...">  
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" (click)="onSendMessage($event)"><i class="fa fa-send"></i></span>
+                                <!-- <button (click)="onSendMessage($event)"><i class="fa fa-send"></i></button> -->
+                            </div>                                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
